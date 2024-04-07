@@ -5,7 +5,7 @@ public class Manager extends Employee {
 
     public Manager(String fullName, double salary) {
         super(fullName, salary);
-        this.numberOfSubordinates = 0; // Domyślnie
+        this.numberOfSubordinates = 4; // Domyślnie // zmiana z 0 na 4 w zad 3
     }
 
 
