@@ -15,6 +15,11 @@ public class Company {
         employees[4] = new Worker("Agata Lindstrom", 8000.0,  "Graphic");
 
         
+        // nowe salary zad 4
+        for (Employee emp : employees) {
+            emp.setSalary(emp.getSalary() + 500);
+        }
+        
         //  nie są instancją klasy Manager
         int nonManagerCount = 0;
         for (Employee emp : employees) {
@@ -23,6 +28,21 @@ public class Company {
         System.out.println(emp);
             }
         }
+
+        for (Employee emp : employees) {
+            if (emp instanceof Manager) {
+                ((Manager)emp).setNumberOfSubordinates(nonManagerCount);
+                emp.setSalary(7500.0);
+            }
+        }
+
+        // Wyświetlenie zaktualizowanych informacji o pracownikach
+        System.out.println("Zaktualizowane info o pracownikach:");
+        for (Employee emp : employees) {
+            System.out.println(emp);
+        }
+
+        
 
         // Ustawienie liczby podwładnych i salary dla Managera (pracownik o indeksie 0)
         if (employees[0] instanceof Manager) {
@@ -52,4 +72,6 @@ public class Company {
             System.out.println(emp);
         }
     }
+
+    
 }
